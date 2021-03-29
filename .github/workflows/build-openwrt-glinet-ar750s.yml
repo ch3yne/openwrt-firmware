@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt x86
+name: Build OpenWrt GL-iNet AR750s
 
 on:
   repository_dispatch:
@@ -20,10 +20,10 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/gl-inet/openwrt
+  REPO_BRANCH: develop
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: x86.config
+  CONFIG_FILE: ar750s.config
   DIY_P1_SH: diy-prev.sh
   DIY_P2_SH: diy-next.sh
   UPLOAD_BIN_DIR: true
@@ -160,7 +160,7 @@ jobs:
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
         touch release.txt
-        echo "x86" >> release.txt
+        echo "GL-iNet AR750s" >> release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
