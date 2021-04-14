@@ -24,8 +24,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: ar750s/feeds.conf.default
   CONFIG_FILE: ar750s/ar750s.config
-  DIY_P1_SH: common_sh/diy-prev.sh
-  DIY_P2_SH: common_sh/diy-next.sh
+  DIY_P1_SH: sh/diy-prev.sh
+  DIY_P2_SH: sh/diy-next.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true

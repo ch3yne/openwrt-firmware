@@ -18,6 +18,6 @@
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 sed -i '$a src-git lienol https://github.com/Lancenas/lienol-openwrt-package.git' feeds.conf.default
-# sed -i '$a src-git opentopd https://github.com/siropboy/sirpdboy-package' feeds.conf.default
+sed -i '$a src-git opentopd https://github.com/siropboy/sirpdboy-package' feeds.conf.default
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
